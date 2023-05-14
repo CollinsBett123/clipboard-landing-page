@@ -108,15 +108,23 @@ h2,h3{
 
 .btn a{
   text-decoration: none;
+  margin-inline:auto;
   padding-block: 1rem;
-  padding-inline: 1.5rem;
+  padding-inline: 2rem;
   color: #fff;
   border-radius: 50px;
-  width: 22rem;
+  max-width: 22rem;
+  box-shadow: 0px 10px 20px -1px gray;
+}
+
+.btn a:hover{
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .btn-iOS{
   background-color: var(--primary-strong-cyan);
+  box-shadow: 0px 10px 20px -1px hsl(171, 66%, 44%);
   margin-bottom: 2rem;
 }
 .btn-Mac{
@@ -174,7 +182,6 @@ header .heading{
 .column .column-info{
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
 }
 
 .column-info .card-info{
@@ -202,11 +209,155 @@ header .heading{
 }
 
 .row-functions{
-  border:1px solid red ;
   display: grid;
   grid-auto-flow: row;
 }
 
 .row-card{
-  
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin-block-end: 4rem;
+}
+.row-card img{
+  margin-bottom: 2rem;
+}
+
+/* Company */
+.company{
+  display: grid;
+  grid-auto-flow: row;
+  place-items: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.company img{
+  margin-block: 3rem;
+}
+
+/* Download */
+.download{
+  display: grid;
+  place-items: center;
+  padding-inline: 2rem ;
+  margin-bottom: 10rem;
+  text-align: center;
+}
+
+.download h3{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.download .btn{
+  margin-top: 2rem;
+}
+
+/* Footer */
+footer{
+  background-color: var(--secondary-grayish-blue); 
+  display: grid;
+  place-items: center;
+  grid-auto-flow: row;
+  gap: 2rem;
+  color: var(--secondary-dark-grayish-blue);
+  padding-block: 4rem;
+}
+
+.footer{
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.footer img{
+  margin: 0 auto;
+}
+
+.footer img,a{
+  margin-block: 2rem;
+}
+
+.p-footer a{
+  text-decoration: none;
+  font-weight: bold;
+  color: gray;
+  display: grid;
+  grid-auto-flow: row;
+}
+
+
+footer .socials i{
+  padding-inline: 2rem; 
+}
+
+footer .socials i:hover{
+  color: var(--primary-strong-cyan); 
+  cursor: pointer;
+}
+
+.p-footer a:hover{
+  color: var(--primary-strong-cyan);
+  cursor: pointer;
+}
+
+/* Media Queries */
+
+@media (min-width: 60em){
+  .column{
+    grid-auto-flow: column;
+    
+  }
+
+  .column img{
+    margin-left: -5rem;
+    margin-bottom: 0;
+  }
+  .column-info{
+    padding-block-start: 5rem;
+  }
+
+  .column-info .card-info{
+    text-align: start;
+    padding-block: 1rem;
+    padding-inline-end: 5rem;
+    margin-block: .1rem
+  }
+
+  .column-info .card-info p{
+    margin-block: 1rem;
+  }
+
+  .container-functions img{
+    margin: 0 auto;
+  }
+
+  .row-functions{
+    grid-auto-flow: column;
+    gap: 5rem;
+    padding: 4rem;
+  }
+
+  .company{
+    grid-auto-flow: column;
+  }
+
+  footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+  }
+
+  .footer{
+    display: flex;
+   
+  }
+
+  .p-footer{
+    margin-left: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 0;
+  }
 }
