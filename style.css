@@ -256,7 +256,7 @@ header .heading{
 
 /* Footer */
 footer{
-  background-color: var(--secondary-grayish-blue); 
+  background-color: rgba(233, 231, 231, 0.356); 
   display: grid;
   place-items: center;
   grid-auto-flow: row;
@@ -304,6 +304,20 @@ footer .socials i:hover{
 /* Media Queries */
 
 @media (min-width: 60em){
+
+  .container-header{
+    max-width: 50rem;
+    margin-inline: auto;
+  }
+
+  .btn{
+    grid-auto-flow: column;
+  }
+
+  .btn-header a{
+    justify-self:end;
+  }
+
   .column{
     grid-auto-flow: column;
     
@@ -340,6 +354,10 @@ footer .socials i:hover{
 
   .company{
     grid-auto-flow: column;
+  }
+
+  .download .btn a{
+    margin-inline: 5rem;
   }
 
   footer{
